@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<fo>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- get방식 쿼리스트링 -->
+    <!-- post방식과의 차이 대량의 데이터를 보낼 떄는 무조건 post // 보안이 필요할 떄 무조건 (비밀번호) -->
+    <form action="/join" method="get"> 
+    <!-- 대량의 정보를 서버에 보낼 때 form tag 사용 -->
+    <!-- action은 데이터를 데리고 갈 목적지 -->
+        <div>이름: <input type="text" name="name" value=""></div>
+        <div>주소: <input type="text" name="addr"></div>
+        <div>이메일: <input type="email" name="email"></div>
+        <div>색상: <input type="color" name="clr"></div>
+        <div>나이: <input type="number" name="age"></div>
+        <div>생년월일: <input type="date" name="birthday"></div>
+        <div>시간: <input type="time" name="teatime"></div>
+
+
+        <div><input type="button" value="걍버튼"></div>
+        <div><button>걍버튼2</button></div>
+
+        <div>
+            <label>축구<input type="checkbox" name="hobby" value="1"></label>
+            <label>농구<input type="checkbox" name="hobby" value="2"></label>
+            <label>수영<input type="checkbox" name="hobby" value="3" checked></label>
+        </div>
+
+        <div>
+            성별 :
+            <label>여자<input type="radio" name="gender" value="female" checked></label>
+            <label>남자<input type="radio" name="gender" value="male"></label>
+        </div>
+
+        <div>
+            지역 :
+            <select name="location">
+                <option value="1">서울</option>
+                <option value="2">대구</option>
+                <option value="3" selected>대전</option>
+                <option value="4">부산</option>
+            </select>
+        </div>
+
+        <div>
+            범위 : <input type="range" name="range">
+        </div>
+
+        <input type="submit" value="전송">
+        <input type="reset" value="리셋">
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position의 용도는 레이아웃을 잡기 위해서 */
+        #first {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: yellowgreen;
+        }
+        #second {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+        #third {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            position: absolute;
+            /* 부모중에 static이 아닌 부모를 찾는다. */
+            right: 10px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="second">
+            <div id="third">
+                Hello
+            </div>
+        </div>
+    </div>
+</body>
+</html>

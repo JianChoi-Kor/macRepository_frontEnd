@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+            
+        }
+
+        Human.prototype.showMe = function() {
+            console.log('My name is' + this.name + ', age is' + this.age);
+        }
+
+        var h1 = new Human('홍길동', 20);
+        var h2 = new Human('강감차', 30);
+
+        h1.height = 180;
+
+        console.log(h1.height); // 180
+        console.log(h2.height); // undefiend
+        
+
+    </script>
+</body>
+</html>

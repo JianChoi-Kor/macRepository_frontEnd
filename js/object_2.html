@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: '홍길동',
+            age: 12,
+            showMe: function() {
+                console.log('My name is '+this.name+ ', age is '+this.age);
+            }
+        };
+
+        console.log(obj.name + ', '+ obj.age);
+        obj.showMe();
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ck_1() { 
+            console.log('--ck_1() called--');
+            return 0;
+        }
+        function ck_2() { 
+            console.log('--ck_2() called--');
+            return 'a';
+        }
+        function ck_3() { 
+            console.log('--ck_3() called--');
+        }
+        
+        if(ck_1() || ck_2() || ck_3()) {
+            console.log('wow');
+        }
+        // or은 하나만 true라도 true 그래서 트루가 나올 때 까지 다 검사, 트루가 나오면 스탑
+
+        if(ck_1() && ck_2() && ck_3()) {
+
+        }
+        // and는 전부 true가 되어야 true 그래서 트루가 나와도 다음 것도 확인, false가 나오면 전체가 false가 되기 때문에 스탑
+
+
+        // 1; ''; undifined; 
+        // ck_1() || ck_2() && ck_3() + wow
+    </script>
+</body>
+</html>
