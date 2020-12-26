@@ -8,51 +8,37 @@
 <body>
     <script>
         function chk_1() {
-            return 1;
+            return 0;
         }
-
         if(chk_1()) {
             console.log('값이 출력?');
             // 0만 false 나머지는 다 true (-도)
         }
-
         function chk_2() {
             return 'aaa';
         }
-
         if(chk_2()) {
             console.log('chk_2()');
             // 빈 문자 ''만 false, 문자가 하나라도 있으면 true
         }
-
         if(undefined) {
             console.log('!!!!!');
             // false;
         }
-
         if(null) {
             console.log('?????');
             // false;
         }
-
         var obj = {};
         if(obj) {
             console.log('obj!!!');
             // 객체 만들기만 하면 true
         }
-
         var arr = [];
         if(arr) {
             console.log('arr!!!');
             // arr.length = 0 이기 때문에 false
         }
-
-
-
-
-
-
-
     </script>
 </body>
 </html>
