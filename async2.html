@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript의 비동기 방식 
+        
+        function printA() {
+            setTimeout(function() {
+                console.log('-- printA callde --')
+                printB();
+            }, 3000);
+        }
+
+        function printB() {
+            setTimeout(function() {
+                console.log('-- printB callde --')
+                printC();
+            }, 2000);
+        }
+
+        function printC() {
+            setTimeout(function() {
+                console.log('-- printC callde --')
+            }, 1000);
+        }
+        printA();
+        
+        
+        // function printA() {
+
+        //     setTimeout(function() {
+        //         console.log('-- printA callde --')
+                
+        //              setTimeout(function() {
+        //                 console.log('-- printB callde --')
+                        
+        //                     setTimeout(function() {
+        //                         console.log('-- printC callde --')
+        //                     }, 1000);
+
+        //             }, 2000);
+
+        //     }, 3000);
+        // }
+
+        // printA();
+        // 콜백 지옥
+
+        
+
+    </script>
+</body>
+</html>
