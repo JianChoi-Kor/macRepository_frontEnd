@@ -38,10 +38,21 @@
                     }, 1000);
                 }
             )
-
-
             
         }
+
+        printA()
+        .then(function(itemA) {
+            consooe.log('itemA : '+ itemA);
+            return printB(itemA);
+        }).then(function(itemB) 
+        {   console.log('itemV : '+ itemB);
+            return printC(itemB)
+        }).then(function(itemC) {
+            console.log('itemC : '+ itemC);
+        })
+
+
         
         printA().then(function(itemA) {
             console.log('pA : ' + itemA);

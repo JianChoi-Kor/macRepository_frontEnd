@@ -38,22 +38,21 @@
                     }, 1000);
                 }
             )
-
-
             
         }
-        
-        printA().then(function(itemA) {
-            console.log('pA : ' + itemA);
 
-            printB(itemA).then(function(itemB) {
-                console.log('pB : ' + itemB);
+        async function proc() {
+            var itemA = await printA();
+            console.log('itemA : '+itemA);
 
-                printC(itemB).then(function(itemC) {
-                    console.log('pC : ' + itemC);
-                });
-            });
-        });
+            var itemB = await printB(itemA);
+            console.log('itemB : '+itemB);
+
+            var itemC = await printC(itemB);
+            console.log('itemC : '+itemC);
+        }
+
+        proc();
 
 
 
