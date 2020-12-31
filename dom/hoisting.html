@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn1() {
+            return privateCalc(10, 20);
+            function privateCalc(n1, n2) {
+                return n1 + n2;
+            }
+            // function을 주는 순간 해당 범위 내에서 가장 위로 올라간다.
+        }
+
+        function privateCalc(n1, n2) {
+            return n1 * n2;
+        }
+
+        console.log(fn1());
+
+        function fn2() {
+            if(1) {
+                var a = 10;
+                // let을 쓰면 다르다.
+            }
+            console.log(a);
+        }
+        // 다른 언어에서 변수는 지역변수 {} 블락 안에서만 적용되지만, javascript에서는 함수안에서 적용된다.
+        // var a 선언부만 hoisting 된다.
+
+        fn2();
+
+    </script>
+</body>
+</html>

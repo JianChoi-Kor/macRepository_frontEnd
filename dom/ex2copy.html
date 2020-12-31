@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+            border-collapse: collapse;
+            border: 1px solid rgb(10, 2, 56)
+        }
+        td {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="color"/>
+    <div id="container"></div>
+    <script>
+        var cont = document.querySelector('#container');
+        // 주소값을 알아내기 위해서
+
+        var inputColor = document.createElement('input');
+        inputColor.type = 'color';
+        inputColor.value = '#ffffff';
+
+        cont.append(inputColor);
+        //append, prepend
+
+        var table = document.createElement('table');
+        
+        for(var i=0; i<20; i++) {
+            var tr = document.createElement('tr');
+          
+            for(var j=0; j<20; j++) {
+                var td = document.createElement('td');
+                td.dataset.row = i;
+                td.dataset.column = j;
+
+                td.onclick = function(e) {
+                    e.target.style.backgroundColor = inputColor.value;
+                };
+                tr.append(td);
+            }
+            table.append(tr);
+        }
+        cont.append(table);
+
+        const cell = document.querySelector('td[data-row="7"][data-column="10"]')
+        console.log(cell);
+        cell.innerText = 'A';
+
+    </script>
+</body>
+</html>

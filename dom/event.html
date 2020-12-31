@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="tx1" type="text">
+    <button id="btn">체크</button>
+
+    <script>
+        var ele = window.tx1;
+        var btn = document.querySelector('#btn');
+        
+        btn.onclick = function() {
+            chkTxt(111);
+        };
+        
+        btn.onclick = chkTxt;
+
+        function chkTxt(val) {
+            console.log(ele.value + ', ' + val);
+        }
+    </script>
+</body>
+</html>

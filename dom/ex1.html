@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <input type="number" id="result" readonly>
+        <button id="btn">더하기</button>
+        
+    </div>
+    <script>
+
+        var n1 = document.querySelector('#num1');
+        var n2 = document.querySelector('#num2');
+        var result = document.querySelector('#result');
+        var btn = document.querySelector('#btn');
+
+        btn.onclick = sumNum;
+
+        function sumNum() {
+            var a = sum(n1.value, n2.value);
+            result.value = a;
+        }
+
+        function sum(n1, n2) {
+            return Number(n1)+Number(n2);
+        }
+        
+    </script>
+</body>
+</html>
