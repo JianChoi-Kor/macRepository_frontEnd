@@ -30,8 +30,12 @@
         btnClear.setAttribute('value', 'Clear');
         // set은 =
 
+        
         btnClear.onclick = function(e) {
-            
+            // var tdArr2 = document.querySelectorAll('td');
+            tdArr2.forEach(function(item) {
+                item.sytle.backgroundColor = '';
+            });
         }
 
 
@@ -41,12 +45,14 @@
         cont.append(btnClear);
 
         var table = document.createElement('table');
-        
+        var tdArr2=[];
+
         for(var i=0; i<20; i++) {
             var tr = document.createElement('tr');
           
             for(var j=0; j<20; j++) {
                 var td = document.createElement('td');
+                tdArr2.push(td);
 
                 td.onclick = function(e) {
 
