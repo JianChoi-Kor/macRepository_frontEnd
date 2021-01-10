@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="common.css">
+    <title>join page</title>
     <script src="common.js"></script>
+    <style>
+        div {
+            padding: 10px;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <input type="button" value="뒤로가기" onclick="back();">
-    </div>
-    
+<body>    
     <div>
         <label> 아이디 : <input id="id" type="text"></label>
+    </div>
+    <div>
         <label> 비밀번호 : <input id="pw" type="text"></label>
+    </div>
+    <div>
         <label> 비밀번호 확인 : <input id="r_pw" type="text"></label>    
     </div>
     
     <div>
+        <input type="button" value="뒤로가기" onclick="back();">
         <input type="button" value="로그인" onclick="create_id();">
     </div>
 

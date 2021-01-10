@@ -11,11 +11,9 @@ function login() {
     }
 }
 
-
 function back() {
-    history.go(-1);
+    history.back();
 }
-
 
 function create_id() {
     var id = document.querySelector('#id');

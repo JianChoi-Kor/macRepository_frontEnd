@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="newexam.css">
+    <title>login page</title>
     <script src="newexam.js"></script>
+    <style>
+        div {
+            padding: 15px;
+        }
+        .button {
+            padding-left: 30px;
+        }
+    </style>
 </head>
 <body>
-
+    <div>
         <label>ID : <input id="id" type="text"></label>
+    </div>
+    <div>
         <label>PW : <input id="pw" type="text"></label>
-
+    </div>
+    <div class="button">
         <a href="join.html"><input type="button" value="회원가입"></a>
-
         <input type="button" value="로그인" onclick="login()">
+    </div>
 </body>
 </html>
+
+
