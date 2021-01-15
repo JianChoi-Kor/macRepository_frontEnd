@@ -1,0 +1,160 @@
+*  {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
+}
+
+#jb-container {
+    min-width: 300px;
+    width: 940px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+}
+
+#jb-nav {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: green;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#jb-nav > label, #menuToggle {
+    line-height: 0px;
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+#jb-header {
+    font-size: 3vw;
+    border: 1px solid darkblue;
+    margin-bottom: 20px;
+}
+
+#jb-content{
+    display: inline-block;
+    width: 580px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid darkblue;
+    margin-bottom: 20px;
+     
+}
+
+#jb-sidebar{
+    width: 260px;
+    height: 300px;
+    float: right;
+    border: 1px solid darkblue;
+    margin-bottom: 20px;
+}
+
+#jb-footer{
+    border: 1px solid darkblue;
+}
+
+#content {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content form {
+    width: 250px;
+    height: 200px;
+    padding: 30px;
+    border: 1px solid firebrick;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#content2 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content2 #child1 {
+    background-color: khaki;
+    flex-grow: 1;
+    display: flex;
+}
+
+#content2 #child2 {
+    background-color: indianred;
+    flex-grow: 1;
+    display: flex;
+}
+#child1_1 {
+    background-color: rgb(36, 34, 11);
+    flex-grow: 2;
+    
+}
+
+#child1_2 {
+    background-color: rgb(102, 101, 92);
+    flex-grow: 3;
+
+}
+#child2_1 {
+    background-color: rgb(41, 84, 136);
+    flex-grow: 3;
+
+}
+#child2_2 {
+    background-color: rgb(169, 189, 56);
+    flex-grow: 2;
+
+}
+
+
+@media (max-width: 700px) {
+    #jb-container {
+        width: auto;
+    }
+    #jb-nav {
+        height: 100%
+    }
+
+    #jb-nav > #menus {
+        display: none;
+    }
+
+    #jb-content {
+        display: inline-block;
+        float: none;
+        width: auto;
+        height: auto;
+    }
+    #jb-sidebar {
+        display: block;
+        float: none;
+        width: auto;
+        height: auto;
+    }
+}
