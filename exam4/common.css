@@ -27,7 +27,6 @@ a {
     padding-right: 50px;
     background-color: green;
     height: 70px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -138,12 +137,36 @@ nav ul li {
         width: auto;
     }
     #jb-nav {
-        height: 100%
+        height: 100%;
     }
 
     #jb-nav > #menus {
+        margin-top: 10px;
         display: none;
     }
+
+    #jb-nav > label {
+        display: block;
+        text-align: right;
+    }
+    
+    #jb-nav > #menuToggle:checked + #menus {
+        display: block;
+    }
+
+    #jb-nav > #menus > li {
+        display: block;
+        text-align: center;
+        border-top: 1px solid coral;
+        padding: 4px;
+    }
+
+    #jb-nav > label > img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
 
     #jb-content {
         display: inline-block;
